@@ -11,9 +11,9 @@ import time
 group_id="velib_sation"
 topic_name="raw_velib_data"
 consumer = KafkaConsumer(topic_name, bootstrap_servers='localhost:9092', group_id=group_id)
-for message in consumer:
-    #data = msg.value().decode()
-    station = json.loads(message.value.decode())
+for msg in consumer:
+    #data = msg.content()
+    station = msg.value.decode()
     #data_dict = json.loads(data)
     print(station)
     #Données de l'Api nécessaire à notre traitement (nous avons scrapé l'Api station information)
