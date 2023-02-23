@@ -22,7 +22,7 @@ message_schema = StructType([
     StructField("offset", StringType())
 ])
 
-# Créer un stream de données Spark à partir du topic Kafka et lire dans un dataframe
+# Créer un stream de données Spark à partir du topic Kafka et lire dans un dataframee
 kafka_df = spark \
     .readStream \
     .format("kafka") \

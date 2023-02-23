@@ -37,7 +37,7 @@ while True:
         # Bonus partie 1 : Vérifier si les données sont différentes de la dernière mise à jour
         if lastUpdatedOther != last_update:
 
-            # Mettre à jour la dernière mise à jour
+            # Mettre à jour la dernière mise à jours
             last_update=lastUpdatedOther
 
             for i in range(6): 
