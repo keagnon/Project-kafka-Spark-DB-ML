@@ -5,15 +5,24 @@ import os
 os.environ['PYSPARK_SUBMIT_ARGS'] = '--packages org.apache.spark:spark-streaming-kafka-0-10_2.12:3.1.1,org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.1 pyspark-shell'
 import findspark
 findspark.init('/opt/spark')
-
 from pyspark.sql import SparkSession
+from pymongo import MongoClient
 
+# Connexion à la base de données MongoDB
+mongo_client = MongoClient("mongodb://localhost:27017/")
+mongo_db = mongo_client["velib"]
+mongo_collection = mongo_db["Average_station"]
+
+# Définition du topic Kafka à consommer
+topic = "raw_velib_data"
+
+# Création de la session Spark
 spark = (SparkSession
         .builder
         .appName("consumer_structured_streaming_test_1")  
         .getOrCreate())
 
-# Créer le schéma pour le stream de données Kafka
+# Définition du schéma du message Kafka
 message_schema = StructType([
     StructField("key", StringType()),
     StructField("value", StringType()),
@@ -22,12 +31,12 @@ message_schema = StructType([
     StructField("offset", StringType())
 ])
 
-# Créer un stream de données Spark à partir du topic Kafka et lire dans un dataframee
+# Créer un stream de données Spark à partir du topic Kafka et lire dans un dataframe
 kafka_df = spark \
     .readStream \
     .format("kafka") \
     .option("kafka.bootstrap.servers", "localhost:9092") \
-    .option("subscribe", "raw_velib_data") \
+    .option("subscribe", topic) \
     .load() \
     .selectExpr("CAST(value AS STRING)")
 
@@ -62,6 +71,11 @@ zone_avgs = final_df.filter("latitude > 48.865983 AND latitude < 48.912060628603
          avg("numBikesAvailableTypesMechanical").alias("Zone_Avg_numBikesAvailableTypesEbike"),
          avg("numBikesAvailableTypesMechanical").alias("Zone_Avg_numBikesAvailableTypesEbike"))
 
+# write the results to MongoDB
+station_average.writeStream \
+    .foreachBatch(lambda batch_df, batch_id: batch_df.write.format("mongo").option("uri", "mongodb://localhost:27017/").option("database", "my_db").option("collection", "my_collection").mode("append").save())
+
+
 # start the streaming query
 """query = final_df \
     .writeStream \
@@ -69,6 +83,7 @@ zone_avgs = final_df.filter("latitude > 48.865983 AND latitude < 48.912060628603
     .option("truncate", "false") \
     .start()
 """
+
 # Write the output to the console
 query = zone_avgs \
     .writeStream \
@@ -77,5 +92,6 @@ query = zone_avgs \
     .outputMode("complete") \
     .trigger(processingTime="3 minutes") \
     .start()
+
 # wait for the query to terminate
 query.awaitTermination()

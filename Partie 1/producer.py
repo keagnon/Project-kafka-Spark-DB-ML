@@ -40,7 +40,7 @@ while True:
             # Mettre à jour la dernière mise à jours
             last_update=lastUpdatedOther
 
-            for i in range(6): 
+            for i in range(50): 
 
                 station_id=response_api_station_information.json()['data']['stations'][i]['station_id']
                 name=response_api_station_information.json()['data']['stations'][i]['name']

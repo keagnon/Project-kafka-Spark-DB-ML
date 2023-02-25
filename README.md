@@ -10,3 +10,6 @@ Suivant les différentes parties de notre projet : partie 1 : Récupération des
 
 https://www.odoo.com/forum/help-1/how-to-install-pip-in-python-3-on-ubuntu-18-04-167715
 https://www.atlassian.com/git/tutorials/git-ssh
+
+
+Laisser tourner pendant 1h pour récuperer les données des stations
