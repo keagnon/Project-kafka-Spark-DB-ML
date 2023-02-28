@@ -36,13 +36,13 @@ Pour mettre en place ce système de traitement de données nous avons divisé no
 
 
 ## Partie 1 : Récupération des données 
-Nous avons collecté les données en tant réel sur le site https://data.opendatasoft.com/pages/home/ensuite (scraping api) puis nous avons créer un producer kafka qui envoi les données reçu sur une instance Kafka toute les minutes tout en vérifiant qu'il ne prend pas 2 fois la mme donnée.
+Nous avons collecté les données en tant réel sur le site https://data.opendatasoft.com/pages/home/ensuite (scraping api) puis nous avons créer un producer kafka qui envoi les données reçu sur une instance Kafka toute les minutes tout en vérifiant qu'il ne prend pas 2 fois la meme donnée.
 <!-- BLOG-POST-LIST:END -->
 
 
 ## Partie 2 : Traitement en ligne
 <!-- BLOG-POST-LIST:START -->
-Ici nous avons effectué des traitements en ligne pour mesurer statistiques d'utilisation des stations en temps réel. Pour ce fait, nous avons connecté Spark Streaming à Kafka et calculer la moyenne pour chaque station disponible : 
+Ici nous avons effectué des traitements en ligne pour mesurer les statistiques d'utilisation des stations en temps réel. Pour ce fait, nous avons connecté Spark Streaming à Kafka et calculer la moyenne pour chaque station disponible : 
 - du nombre de vélos mécaniques disponibles
 - du nombre de vélos électriques disponibles
 - du nombre de place libres disponibles
@@ -70,7 +70,39 @@ Pour cette partie, nous avons procédé comme suit :
 <!-- BLOG-POST-LIST:END -->
 
 
+## Pour lancer le projet 
+<!-- BLOG-POST-LIST:START -->
+Il faut :
+- Installer kafka : https://kafka.apache.org/quickstart
+- installer Spark ansi que ses dependencies
+- Lancer le server kafka : bin/kafka-server-start.sh config/server.properties
+- Lancer Zookeeper : bin/zookeeper-server-start.sh config/zookeeper.properties
+<!-- BLOG-POST-LIST:END -->
 
+## DEMOS
+<!-- BLOG-POST-LIST:START -->
+<img align="center" src="/Images/part1.png"/>
+<br/>
+<!-- BLOG-POST-LIST:END -->
 
+<!-- BLOG-POST-LIST:START -->
+<img align="center" src="/Images/part2-average.png"/>
+<br/>
+<!-- BLOG-POST-LIST:END -->
+
+<!-- BLOG-POST-LIST:START -->
+<img align="center" src="/Images/part2-zone.png"/>
+<br/>
+<!-- BLOG-POST-LIST:END -->
+
+<!-- BLOG-POST-LIST:START -->
+<img align="center" src="/Images/avg_station_eveery_5min_partie2.png"/>
+<br/>
+<!-- BLOG-POST-LIST:END -->
+
+<!-- BLOG-POST-LIST:START -->
+<img align="center" src="/Images/avg_zo.png"/>
+<br/>
+<!-- BLOG-POST-LIST:END -->
 
 
