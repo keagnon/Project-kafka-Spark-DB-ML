@@ -6,35 +6,69 @@ L'objectif de ce projet est de mettre en place un système de traitement de donn
 
 Il se compose de fichiers .ipynb de data cleaning, de fichiers .py pour le code python, de fichiers .csv  qui étaient nos sources de données ainsi qu'une base de données NoSQL MongoDB.
 
+
 <img align="center" src="/Images/station_velib.jpg"/>
 <br/>
 
+
+## Architecture globale du projet 
+<img align="center" src="/Images/architecture-projet-velib.jpg"/>
+<br/>
+
+
+## Outils
+<!-- BLOG-POST-LIST:START -->
+- Apache Kafka
+- Spark
+- MongoDB
+- Databriks
+- Spark ML
+- API SQL
+- Pandas
+- Logic regression
+- Système d'exploition : Ubuntu
+<!-- BLOG-POST-LIST:END -->
+
+
 # Mise en place du projet
 <!-- BLOG-POST-LIST:START -->
-Notre projet comprend 4 grandes parties :
-## partie 1 : Récupération des données 
-Nous avons scrapés les données d'une APi ensuite Créer un producer kafka qui envoi les données reçu sur une instance Kafka toute les minutes
+Pour mettre en place ce système de traitement de données nous avons divisé notre projet en 4 grandes parties :
+
+
+## Partie 1 : Récupération des données 
+Nous avons collecté les données en tant réel sur le site https://data.opendatasoft.com/pages/home/ensuite (scraping api) puis nous avons créer un producer kafka qui envoi les données reçu sur une instance Kafka toute les minutes tout en vérifiant qu'il ne prend pas 2 fois la mme donnée.
 <!-- BLOG-POST-LIST:END -->
 
-## partie 2 : Traitement en ligne
+
+## Partie 2 : Traitement en ligne
 <!-- BLOG-POST-LIST:START -->
-gdg
+Ici nous avons effectué des traitements en ligne pour mesurer statistiques d'utilisation des stations en temps réel. Pour ce fait, nous avons connecté Spark Streaming à Kafka et calculer la moyenne pour chaque station disponible : 
+- du nombre de vélos mécaniques disponibles
+- du nombre de vélos électriques disponibles
+- du nombre de place libres disponibles
+- moyenne d'occupation des stations dans une zone géographique 
+Puis nous avons stocké le résultat des traitements dans une base de donnée Nosql MongoDB
 <!-- BLOG-POST-LIST:END -->
 
-## partie 3 : Traitement par batch
+
+## Partie 3 : Traitement par batch
 <!-- BLOG-POST-LIST:START -->
-sgdshd
+Ici nous avons effectué des traitements sur des batchs afin d'avoir des statistiques d'utilisation à plus long terme. Pour ce fait, nous avons :
+- Agréger l'ensemble des données récupérée dans un fichier csv
+- Créer un cluster gratuit et un notebook sur https://community.cloud.databricks.com
+- Analyser les données
+- Faire un traitement des données l'API SQL
+- Comparer le temps de traitement entre une partition et deux partitions
 <!-- BLOG-POST-LIST:END -->
 
-## partie 4 : Machine learning
+
+## Partie 4 : Machine learning
 <!-- BLOG-POST-LIST:START -->
-tsry
+Pour cette partie, nous avons procédé comme suit :
+- Récupérer toutes les données d'une station seulement
+- faire un modèle qui prédire si une station sera remplie à un instant tt en fonction du nombre de place disponibles
 <!-- BLOG-POST-LIST:END -->
 
-
-partie 2 : Traitement en ligne (nous avons connecté Spark Streaming à Kafka pour faire des calculs statistiques); 
-partie 3 : Traitement par batch ( avoir des statistiques d'utilisation à plus long terme)
-la partie 4 : Machine learning (avec Spark ml, nous avons fait un modèle qui aura pour but de prédire si une station sera remplie à un instant tt en fonction du nombre de place disponibles )
 
 
 
