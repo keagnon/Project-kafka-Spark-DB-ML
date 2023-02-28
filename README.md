@@ -1,7 +1,7 @@
-# Projet-Big-data-et-Dataviz
+### Projet-Big-data-et-Dataviz
 L'objectif de ce projet est de mettre en place un système de traitement de données pour la métrople de Paris pour augmenter l'usage de son service de vélos partagés (vélib) et améliorer l’expérience de ses abonnements.
 
-
+<img align="left" src="/Images/station_velib.jpg"/>
 Ce repository héberge notre travail effectué lors d'un projet de notre majeure Big Data et Dataviz.
 
 Il se compose de fichiers .ipynb de data cleaning, de fichiers .py pour le code python, de fichiers .csv  qui étaient nos sources de données ainsi qu'une base de données NoSQL MongoDB.
