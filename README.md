@@ -6,7 +6,7 @@ L'objectif de ce projet est de mettre en place un système de traitement de donn
 
 Il se compose de fichiers .ipynb de data cleaning, de fichiers .py pour le code python, de fichiers .csv  qui étaient nos sources de données ainsi qu'une base de données NoSQL MongoDB.
 
-<img align="left" src="/Images/station_velib.jpg"/ style="margin-bottom:2rem">
+<img align="center" src="/Images/station_velib.jpg"/>
 <br/>
 
 # Mise en place du projet
