@@ -1,4 +1,4 @@
-### Projet Big data et Dataviz : Mise en place d'un système de traitement des vélos partagés (vélib) 
+### Mise en place d'un système de traitement des vélos partagés (vélib) 
 
 Ce repository héberge notre travail effectué lors d'un projet de notre majeure Big Data et Dataviz.
 
@@ -12,7 +12,7 @@ Il se compose de fichiers .ipynb de data cleaning, de fichiers .py pour le code 
 
 
 ## Architecture globale du projet 
-<img align="center" src="/Images/architecture-projet-velib.jpg"/>
+<img align="center" src="/Images/architecture-projet-velib.png"/>
 <br/>
 
 
