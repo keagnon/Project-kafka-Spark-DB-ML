@@ -81,27 +81,19 @@ Il faut :
 
 ## DEMOS
 <!-- BLOG-POST-LIST:START -->
-<img align="center" src="/Images/part1.png"/>
+<img align="center" src="/Images/part1.PNG"/>
 <br/>
-<!-- BLOG-POST-LIST:END -->
 
-<!-- BLOG-POST-LIST:START -->
-<img align="center" src="/Images/part2-average.png"/>
+<img align="center" src="/Images/part2-average.PNG"/>
 <br/>
-<!-- BLOG-POST-LIST:END -->
 
-<!-- BLOG-POST-LIST:START -->
-<img align="center" src="/Images/part2-zone.png"/>
+<img align="center" src="/Images/part2-zone.PNG"/>
 <br/>
-<!-- BLOG-POST-LIST:END -->
 
-<!-- BLOG-POST-LIST:START -->
-<img align="center" src="/Images/avg_station_eveery_5min_partie2.png"/>
+<img align="center" src="/Images/avg_station_eveery_5min_partie2.PNG"/>
 <br/>
-<!-- BLOG-POST-LIST:END -->
 
-<!-- BLOG-POST-LIST:START -->
-<img align="center" src="/Images/avg_zo.png"/>
+<img align="center" src="/Images/avg_zo.PNG"/>
 <br/>
 <!-- BLOG-POST-LIST:END -->
 
