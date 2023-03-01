@@ -4,7 +4,7 @@ Ce repository héberge notre travail effectué lors d'un projet de notre majeure
 
 L'objectif de ce projet est de mettre en place un système de traitement de données pour la métrople de Paris dans le but d'augmenter l'usage de son service de vélos partagés (vélib) et améliorer l’expérience de ses abonnements.
 
-Il se compose de fichiers .ipynb de data cleaning, de fichiers .py pour le code python, de fichiers .csv  qui étaient nos sources de données ainsi qu'une base de données NoSQL MongoDB.
+Il se compose de fichiers .ipynb de data cleaning, data analysis, des fichiers .py pour le code python, de fichier .csv, des fichiers .md contenant les liens de chaque notebook créé dans le databrick ainsi qu'une base de données NoSQL (MongoDB).
 <!-- BLOG-POST-LIST:END -->
 
 <img align="center" src="/Images/station_velib.jpg"/>
