@@ -2,7 +2,7 @@
 <!-- BLOG-POST-LIST:START -->
 Ce repository héberge notre travail effectué lors d'un projet de notre majeure Big Data et Dataviz.
 
-L'objectif de ce projet est de mettre en place un système de traitement de données pour la métrople de Paris pour augmenter l'usage de son service de vélos partagés (vélib) et améliorer l’expérience de ses abonnements.
+L'objectif de ce projet est de mettre en place un système de traitement de données pour la métrople de Paris dans le but d'augmenter l'usage de son service de vélos partagés (vélib) et améliorer l’expérience de ses abonnements.
 
 Il se compose de fichiers .ipynb de data cleaning, de fichiers .py pour le code python, de fichiers .csv  qui étaient nos sources de données ainsi qu'une base de données NoSQL MongoDB.
 <!-- BLOG-POST-LIST:END -->
@@ -25,7 +25,8 @@ Il se compose de fichiers .ipynb de data cleaning, de fichiers .py pour le code 
 - Spark ML
 - API SQL
 - Pandas
-- Logic regression
+- Python
+- Logistic regression
 - Système d'exploition : Ubuntu
 <!-- BLOG-POST-LIST:END -->
 
@@ -36,7 +37,7 @@ Pour mettre en place ce système de traitement de données nous avons divisé no
 
 
 ## Partie 1 : Récupération des données 
-Nous avons collecté les données en tant réel sur le site https://data.opendatasoft.com/pages/home/ensuite (scraping api) puis nous avons créer un producer kafka qui envoi les données reçu sur une instance Kafka toute les minutes tout en vérifiant qu'il ne prend pas 2 fois la meme donnée.
+Nous avons collecté les données en tant réel sur le site https://data.opendatasoft.com/pages/home/ensuite (scraping api) puis nous avons créé un producer kafka qui envoi les données reçu sur une instance Kafka toute les minutes tout en vérifiant qu'il ne prend pas deux fois la même donnée.
 <!-- BLOG-POST-LIST:END -->
 
 
@@ -47,6 +48,7 @@ Ici nous avons effectué des traitements en ligne pour mesurer les statistiques 
 - du nombre de vélos électriques disponibles
 - du nombre de place libres disponibles
 - moyenne d'occupation des stations dans une zone géographique 
+
 Puis nous avons stocké le résultat des traitements dans une base de donnée Nosql MongoDB
 <!-- BLOG-POST-LIST:END -->
 
@@ -66,7 +68,7 @@ Ici nous avons effectué des traitements sur des batchs afin d'avoir des statist
 <!-- BLOG-POST-LIST:START -->
 Pour cette partie, nous avons procédé comme suit :
 - Récupérer toutes les données d'une station seulement
-- faire un modèle qui prédire si une station sera remplie à un instant tt en fonction du nombre de place disponibles
+- Faire un modèle qui prédire si une station sera remplie à un instant tt en fonction du nombre de place disponibles
 <!-- BLOG-POST-LIST:END -->
 
 
@@ -74,7 +76,7 @@ Pour cette partie, nous avons procédé comme suit :
 <!-- BLOG-POST-LIST:START -->
 Il faut :
 - Installer kafka : https://kafka.apache.org/quickstart
-- installer Spark ansi que ses dependencies
+- Installer Spark ansi que ses dependencies
 - Lancer le server kafka : bin/kafka-server-start.sh config/server.properties
 - Lancer Zookeeper : bin/zookeeper-server-start.sh config/zookeeper.properties
 <!-- BLOG-POST-LIST:END -->
