@@ -12,7 +12,7 @@ Il se compose de fichiers .ipynb de data cleaning, data analysis, des fichiers .
 
 
 ## Architecture globale du projet 
-<img align="center" src="/Images/architecture-projet-velib.png"/>
+<img align="center" src="/Images/Architecture_projet_velib.drawio.png"/>
 <br/>
 
 

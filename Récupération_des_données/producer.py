@@ -7,14 +7,18 @@ import requests
 import collections
 collections.Callable = collections.abc.Callable
 
+
 # Créer un producteur Kafka
 producer = KafkaProducer(bootstrap_servers="localhost:9092")
 
-# Définir les informations de connexion Kafka
-topic_name="raw_velib_data"
 
-# Stocker la dernière mise à jour
+# Définir les informations de connexion Kafka
+topic_name="velib_data"
+
+
+# Stocker la dernière mise à jourd
 last_update = 0
+
 
 while True:
     try:
@@ -59,8 +63,10 @@ while True:
                 is_renting=response_api_station_status.json()['data']['stations'][i]['is_renting']
                 last_reported=response_api_station_status.json()['data']['stations'][i]['last_reported']
                 
-                msg=f"{station_id},{name},{lat},{lon},{capacity},{stationCode},{numBikesAvailable},{num_bikes_available_types_mechanical},{num_bikes_available_types_ebike},{numDocksAvailable}"
+
+                msg=f"{station_id},{name},{lat},{lon},{capacity},{stationCode},{numBikesAvailable},{num_bikes_available_types_mechanical},{num_bikes_available_types_ebike},{numDocksAvailable},{last_reported}"
                
+
                 # Envoyer les données au producteur Kafka
                 producer.send(topic_name, bytes(msg, encoding='utf8'))
 
@@ -69,6 +75,7 @@ while True:
         
         # Attendre une minute avant de récupérer les données à nouveau
         time.sleep(60)
+
 
         print(f"Data available at,{time}")
 
