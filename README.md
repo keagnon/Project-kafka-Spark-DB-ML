@@ -32,7 +32,7 @@ Il se compose de fichiers .ipynb de data cleaning, data analysis, des fichiers .
 
 
 # Mise en place du projet
-<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:START  -->
 Pour mettre en place ce système de traitement de données nous avons divisé notre projet en 4 grandes parties :
 
 
