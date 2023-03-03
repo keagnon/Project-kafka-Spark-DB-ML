@@ -86,10 +86,17 @@ Il faut :
 
 ## DEMOS
 <!-- BLOG-POST-LIST:START -->
-<img align="center" src="/Images/average_bike_available_calculate_every_3min.PNG"/>
+
+<img align="center" src="/Images/collecte_envoi_des_données.PNG"/>
+<br/>
+
+<img align="center" src="/Images/consumer_velib.PNG"/>
 <br/>
 
 <img align="center" src="/Images/average_type_of_bike.PNG"/>
+<br/>
+
+<img align="center" src="/Images/average_bike_available_calculate_every_3min.PNG"/>
 <br/>
 
 <img align="center" src="/Images/avg_bike_available_in_specific_zone_3min.PNG"/>
@@ -98,11 +105,7 @@ Il faut :
 <img align="center" src="/Images/avg_zone_type_bike.PNG"/>
 <br/>
 
-<img align="center" src="/Images/collecte_envoi_des_données.PNG"/>
-<br/>
 
-<img align="center" src="/Images/consumer_velib.PNG"/>
-<br/>
 <!-- BLOG-POST-LIST:END -->
 
 
