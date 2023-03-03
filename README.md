@@ -4,7 +4,8 @@ Ce repository héberge notre travail effectué lors d'un projet de notre majeure
 
 L'objectif de ce projet est de mettre en place un système de traitement de données pour la métrople de Paris dans le but d'augmenter l'usage de son service de vélos partagés (vélib) et améliorer l’expérience de ses abonnements.
 
-Il se compose de fichiers .ipynb de data cleaning, data analysis, des fichiers .py pour le code python, de fichier .csv, des fichiers .md contenant les liens de chaque notebook créé dans le databrick ainsi qu'une base de données NoSQL (MongoDB).
+Il se compose de fichiers .ipynb de data analysis, des fichiers .py pour le code python, de fichier .csv pour agréger des données collectées dans le but d'obtenir une vue d'ensemble et une compréhension plus complète des données, des fichiers .md contenant les liens de chaque notebook créé dans le databrick (pour les traitement avec l'API SQL et le traitement par batch) ainsi qu'une base de données NoSQL (MongoDB).
+
 <!-- BLOG-POST-LIST:END -->
 
 <img align="center" src="/Images/station_velib.jpg"/>
@@ -16,7 +17,7 @@ Il se compose de fichiers .ipynb de data cleaning, data analysis, des fichiers .
 <br/>
 
 
-## Outils
+## Outils et librairies
 <!-- BLOG-POST-LIST:START -->
 - Apache Kafka
 - Spark
@@ -24,9 +25,13 @@ Il se compose de fichiers .ipynb de data cleaning, data analysis, des fichiers .
 - Databriks
 - Spark ML
 - API SQL
+- spark
 - Pandas
 - Python
 - Logistic regression
+- pymongo
+- findspark
+- pyspark
 - Système d'exploition : Ubuntu
 <!-- BLOG-POST-LIST:END -->
 
