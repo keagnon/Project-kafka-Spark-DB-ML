@@ -111,10 +111,10 @@ Il faut :
 <!-- BLOG-POST-LIST:START -->
 Dans l'ensemble, je suis satisfait de la mise en place de ce projet. Voici quelques éléments clés de mon bilan personnel :
 
-- Réalisation des objectifs
+- Réalisation des objectifs :
 J'ai réussi à atteindre les objectifs que je m'étais fixés pour le projet.
 
-- Apprentissages 
+- Apprentissages : 
 La mise en place de ce projet m'a appris beaucoup de choses sur l'environnement kafka, spark, la programmation python, l'utilisation d'une base de donnée nosql, l'analyse des données et la mise en place de modèle de machine avec sparkml. Je suis heureuse d'avoir acquis de nouvelles compétences.
 
 - Points à améliorer : Bien que le projet ait été un succès, je pense qu'il y a toujours des points à améliorer. Par exemple, je pourrais travailler sur l'automatisation des taches avec Airflow.
