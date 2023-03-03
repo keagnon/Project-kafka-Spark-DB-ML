@@ -1,6 +1,7 @@
 ### Mise en place d'un système de traitement des vélos partagés (vélib) 
 <!-- BLOG-POST-LIST:START -->
 Ce repository héberge notre travail effectué lors d'un projet de notre majeure Big Data et Dataviz.
+
 L'objectif de ce projet est de mettre en place un système de traitement de données pour la métrople de Paris dans le but d'augmenter l'usage de son service de vélos partagés (vélib) et améliorer l’expérience de ses abonnements.
 Il se compose de fichiers .ipynb de data analysis, des fichiers .py pour le code python, de fichier .csv pour agréger des données collectées dans le but d'obtenir une vue d'ensemble et une compréhension plus complète des données, des fichiers .md contenant les liens de chaque notebook créé dans le databrick (une pour le traitement avec par batch & l'API SQL et un second pour la mise en place du modèle de machine Learning avec Spark Ml ) ainsi qu'une base de données NoSQL (MongoDB).
 
