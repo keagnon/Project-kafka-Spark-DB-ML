@@ -98,11 +98,13 @@ Il faut :
 <img align="center" src="/Images/average_bike_available_calculate_every_3min.PNG"/>
 <br/>
 
+<img align="center" src="/Images/avg_zone_type_bike.PNG"/>
+<br/>
+
 <img align="center" src="/Images/avg_bike_available_in_specific_zone_3min.PNG"/>
 <br/>
 
-<img align="center" src="/Images/avg_zone_type_bike.PNG"/>
-<br/>
+
 
 
 <!-- BLOG-POST-LIST:END -->
