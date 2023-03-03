@@ -105,8 +105,6 @@ Il faut :
 <br/>
 
 
-
-
 <!-- BLOG-POST-LIST:END -->
 
 
