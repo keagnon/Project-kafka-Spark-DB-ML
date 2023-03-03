@@ -4,7 +4,7 @@ Ce repository héberge notre travail effectué lors d'un projet de notre majeure
 
 L'objectif de ce projet est de mettre en place un système de traitement de données pour la métrople de Paris dans le but d'augmenter l'usage de son service de vélos partagés (vélib) et améliorer l’expérience de ses abonnements.
 
-Il se compose de fichiers .ipynb de data analysis, des fichiers .py pour le code python, de fichier .csv pour agréger des données collectées dans le but d'obtenir une vue d'ensemble et une compréhension plus complète des données, des fichiers .md contenant les liens de chaque notebook créé dans le databrick (pour les traitement avec l'API SQL et le traitement par batch) ainsi qu'une base de données NoSQL (MongoDB).
+Il se compose de fichiers .ipynb de data analysis, des fichiers .py pour le code python, de fichier .csv pour agréger des données collectées dans le but d'obtenir une vue d'ensemble et une compréhension plus complète des données, des fichiers .md contenant les liens de chaque notebook créé dans le databrick (une pour le traitement avec par batch & l'API SQL et un second pour la mise en place du modèle de machine Learning avec Spark Ml ) ainsi qu'une base de données NoSQL (MongoDB).
 
 <!-- BLOG-POST-LIST:END -->
 
@@ -13,26 +13,24 @@ Il se compose de fichiers .ipynb de data analysis, des fichiers .py pour le code
 
 
 ## Architecture globale du projet 
-<img align="center" src="/Images/Architecture_projet_velib.drawio.png"/>
+<img align="center" src="/Images/Architecture_projet_velib2.png"/>
 <br/>
 
 
 ## Outils et librairies
 <!-- BLOG-POST-LIST:START -->
 - Apache Kafka
-- Spark
 - MongoDB
 - Databriks
 - Spark ML
 - API SQL
-- spark
+- Spark
 - Pandas
 - Python
 - Logistic regression
-- pymongo
-- findspark
-- pyspark
 - Système d'exploition : Ubuntu
+
+Plus de détail : Voir fichier requirements.txt
 <!-- BLOG-POST-LIST:END -->
 
 
@@ -88,19 +86,22 @@ Il faut :
 
 ## DEMOS
 <!-- BLOG-POST-LIST:START -->
-<img align="center" src="/Images/part1.PNG"/>
+<img align="center" src="/Images/average_bike_available_calculate_every_3min.PNG"/>
 <br/>
 
-<img align="center" src="/Images/part2-average.PNG"/>
+<img align="center" src="/Images/average_type_of_bike.PNG"/>
 <br/>
 
-<img align="center" src="/Images/part2-zone.PNG"/>
+<img align="center" src="/Images/avg_bike_available_in_specific_zone_3min.PNG"/>
 <br/>
 
-<img align="center" src="/Images/avg_station_eveery_5min_partie2.PNG"/>
+<img align="center" src="/Images/avg_zone_type_bike.PNG"/>
 <br/>
 
-<img align="center" src="/Images/avg_zo.PNG"/>
+<img align="center" src="/Images/collecte_envoi_des_données.PNG"/>
+<br/>
+
+<img align="center" src="/Images/consumer_velib.PNG"/>
 <br/>
 <!-- BLOG-POST-LIST:END -->
 
